@@ -66,11 +66,11 @@ public class StudentEmploymentRecommendationServiceImpl implements StudentEmploy
             Long companyCountPeople = studentEmploymentRecommendationMapper.countPeopleBySpecialtyOrCharacter(SpecialtyOrCharacter, companyName);
             //计算指数
             BigDecimal bigDecimal2 = new BigDecimal(companyCountPeople.doubleValue());
-            BigDecimal divide = bigDecimal2.divide(bigDecimal1, 2, RoundingMode.HALF_UP);
+            BigDecimal divide = bigDecimal2.divide(bigDecimal1, 2, RoundingMode.HALF_UP).multiply(new BigDecimal(100));
             //封装出参
             studentEmploymentAnalysisReportVo.setCompanyName(companyName);
             studentEmploymentAnalysisReportVo.setCountPeople(companyCountPeople+"人");
-            studentEmploymentAnalysisReportVo.setEmploymentIndex(divide);
+            studentEmploymentAnalysisReportVo.setEmploymentIndex(divide.toString()+"%");
             studentEmploymentAnalysisReportVos.add(studentEmploymentAnalysisReportVo);
         }
         return studentEmploymentAnalysisReportVos;

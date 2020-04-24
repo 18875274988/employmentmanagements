@@ -23,5 +23,5 @@ public class StudentEmploymentAnalysisReportVo {
     /**
      * 就业指数
      */
-    private BigDecimal EmploymentIndex;
+    private String employmentIndex;
 }
