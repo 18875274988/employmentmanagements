@@ -7,4 +7,20 @@
         values (#{studentName},#{studentNo},#{studentSpecialty},#{studentCharacter},#{companyName},#{duty},#{studentClass},#{studentTeacher})
     </insert>
 
+    <select id="getEmploymentInformationById" resultType="com.em.employmentmanagements.po.EmploymentInformationPo">
+        select * from employment_information where id=#{id}
+    </select>
+
+    <update id="updateEmploymentInformationById">
+        update employment_information set student_name=#{employmentInformationPo.studentName},student_no=#{employmentInformationPo.studentNo},student_specialty=#{employmentInformationPo.studentSpecialty},student_character=#{employmentInformationPo.studentCharacter},company_name=#{employmentInformationPo.companyName},duty=#{employmentInformationPo.duty},student_class=#{employmentInformationPo.studentClass},student_teacher=#{employmentInformationPo.studentTeacher} where id=#{id}
+    </update>
+
+    <select id="selectAll" resultType="com.em.employmentmanagements.po.EmploymentInformationPo">
+        select * from employment_information
+    </select>
+
+    <delete id="deleteById">
+        delete from employment_information where id=#{id}
+    </delete>
+
 </mapper>

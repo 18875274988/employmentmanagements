@@ -1,5 +1,6 @@
 package com.em.employmentmanagements.controller;
 
+import com.em.employmentmanagements.po.UserPo;
 import com.em.employmentmanagements.service.UserService;
 import com.em.employmentmanagements.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,4 +45,15 @@ public class UserController {
     public int updatePasswordByname(UserVo userVo){
         return userService.updatePasswordByname(userVo);
     }
+
+    /**
+     * 根据用户名查询专业性格
+     * @param username
+     * @return
+     */
+    @GetMapping("/selectById")
+    public UserPo selectById(String username){
+        return userService.selectById(username);
+    }
+
 }
