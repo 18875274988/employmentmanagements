@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.em.employmentmanagements.mapper.EmploymentInformationMapper">
+
+    <insert id="addEmploymentInformation">
+        insert into employment_information(student_name,student_no,student_specialty,student_character,company_name,duty,student_class,student_teacher)
+        values (#{studentName},#{studentNo},#{studentSpecialty},#{studentCharacter},#{companyName},#{duty},#{studentClass},#{studentTeacher})
+    </insert>
+
+</mapper>
