@@ -58,4 +58,43 @@ public class MajorNameController {
         return majorNameService.updatePerson(id,personalityType);
     }
 
+    /**
+     * 根据id删除专业名
+     * @param id
+     * @return
+     */
+    @RequestMapping("deletMajorName")
+    public int deletMajorName(Integer id){
+        return majorNameService.deletMajorName(id);
+    }
+
+    /**
+     * 根据id删除性格类型
+     * @param id
+     * @return
+     */
+    @RequestMapping("deletePersonalityType")
+    public int deletePersonalityType(Integer id){
+        return majorNameService.deletePersonalityType(id);
+    }
+
+    /**
+     * 新增专业名称
+     * @param majorNamePo
+     * @return
+     */
+    @RequestMapping("addMajorName")
+    public int addMajorName(MajorNamePo majorNamePo){
+        return majorNameService.addMajorName(majorNamePo);
+    }
+
+    /**
+     * 新增性格类型
+     * @param personalityTypePo
+     * @return
+     */
+    @RequestMapping("addPersonalityType")
+    public int addPersonalityType(PersonalityTypePo personalityTypePo){
+        return majorNameService.addPersonalityType(personalityTypePo);
+    }
 }

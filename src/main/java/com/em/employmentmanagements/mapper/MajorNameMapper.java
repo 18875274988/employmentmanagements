@@ -28,4 +28,18 @@ public interface MajorNameMapper {
      * @return
      */
     int updateMajorName(@Param("majorName")String majorName,@Param("id")Integer id);
+
+    /**
+     * 根据id删除专业名
+     * @param id
+     * @return
+     */
+    int deletMajorName(Integer id);
+
+    /**
+     * 新增专业名
+     * @param majorNamePo
+     * @return
+     */
+    int addMajorName(MajorNamePo majorNamePo);
 }

@@ -39,4 +39,28 @@ public interface MajorNameService {
      * @return
      */
     int updatePerson(Integer id,String personalityType);
+    /**
+     * 根据id删除专业名
+     * @param id
+     * @return
+     */
+    int deletMajorName(Integer id);
+    /**
+     * 根据id删除性格类型
+     * @param id
+     * @return
+     */
+    int deletePersonalityType(Integer id);
+    /**
+     * 新增专业名
+     * @param majorNamePo
+     * @return
+     */
+    int addMajorName(MajorNamePo majorNamePo);
+    /**
+     * 新增性格类型
+     * @param personalityTypePo
+     * @return
+     */
+    int addPersonalityType(PersonalityTypePo personalityTypePo);
 }

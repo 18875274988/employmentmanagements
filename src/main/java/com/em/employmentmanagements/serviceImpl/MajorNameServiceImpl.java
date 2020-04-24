@@ -73,4 +73,45 @@ public  class MajorNameServiceImpl implements MajorNameService {
             return a;
         }
     }
+
+    /**
+     * 根据id删除专业名
+     * @param id
+     * @return
+     */
+    @Override
+    public int deletMajorName(Integer id) {
+        return majorNameMapper.deletMajorName(id);
+    }
+
+    /**
+     * 根据id删除性格类型
+     * @param id
+     * @return
+     */
+    @Override
+    public int deletePersonalityType(Integer id) {
+        return personalityTypeMapper.deletePersonalityType(id);
+    }
+
+    /**
+     * 新增专业名
+     * @param majorNamePo
+     * @return
+     */
+    @Override
+    public int addMajorName(MajorNamePo majorNamePo) {
+        return majorNameMapper.addMajorName(majorNamePo);
+    }
+
+    /**
+     * 新增性格类型
+     * @param personalityTypePo
+     * @return
+     */
+    @Override
+    public int addPersonalityType(PersonalityTypePo personalityTypePo) {
+        return personalityTypeMapper.addPersonalityType(personalityTypePo);
+    }
+
 }

@@ -3,8 +3,8 @@
 <mapper namespace="com.em.employmentmanagements.mapper.UserMapper">
 
     <insert id="addUser">
-        insert into user(username,password,permission,specialty,characterState)
-        values (#{username},#{password},'1',#{specialty},#{character_state})
+        insert into user(username,password,permission,specialty,character_state)
+        values (#{username},#{password},'1',#{specialty},#{characterState} )
     </insert>
 
     <select id="login" resultType="String">

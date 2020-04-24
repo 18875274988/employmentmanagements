@@ -3,11 +3,17 @@
 <mapper namespace="com.em.employmentmanagements.mapper.PersonalityTypeMapper">
 
     <select id="findaAllPerson" resultType="com.em.employmentmanagements.po.PersonalityTypePo">
-                        SELECT id,personality_type FROM major_name;
+                        SELECT id,personality_type FROM personality_type;
     </select>
 
     <update id="updatePersonalityType">
-        update major_name set personality_type=#{personalityType} where id=#{id}
+        update personality_type set personality_type=#{personalityType} where id=#{id}
     </update>
+    <delete id="deletePersonalityType">
+        delete from personality_type where id=#{id}
+    </delete>
+    <insert id="addPersonalityType">
+        insert  into personality_type values (null,#{personalityType} )
+    </insert>
 
 </mapper>

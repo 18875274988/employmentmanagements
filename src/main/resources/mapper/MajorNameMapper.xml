@@ -8,5 +8,11 @@
     <update id="updateMajorName">
         update major_name set major_name=#{majorName} where id=#{id}
     </update>
+    <delete id="deletMajorName">
+        delete from major_name where id=#{id}
+    </delete>
+    <insert id="addMajorName">
+        insert into major_name values (null ,#{majorName} )
+    </insert>
 
 </mapper>

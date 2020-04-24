@@ -27,4 +27,18 @@ public interface PersonalityTypeMapper {
      * @return
      */
     int updatePersonalityType(@Param("personalityType")String personalityType, @Param("id")Integer id);
+
+    /**
+     * 根据id删除性格类型
+     * @param id
+     * @return
+     */
+    int deletePersonalityType(Integer id);
+
+    /**
+     * 新增性格类型
+     * @param personalityTypePo
+     * @return
+     */
+    int addPersonalityType(PersonalityTypePo personalityTypePo);
 }
