@@ -22,7 +22,6 @@ public class HeaderFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
 
     }
-
     @Override
     public void doFilter(ServletRequest request, ServletResponse resp, FilterChain chain) throws IOException, ServletException
     {
@@ -34,7 +33,6 @@ public class HeaderFilter implements Filter {
         response.setHeader("Pragma", "no-cache");
         chain.doFilter(request, resp);
     }
-
     @Override
     public void destroy() {
 
