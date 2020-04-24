@@ -1,5 +1,6 @@
 package com.em.employmentmanagements.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -30,4 +31,25 @@ public interface StudentEmploymentRecommendationMapper {
      * @return
      */
     Long countPeople(String companyName);
+
+    /**
+     * 根据专业或性格查询公司名称
+     * @param SpecialtyOrCharacter
+     * @return
+     */
+    List<String> findCompanyNameBySpecialtyOrCharacter(String SpecialtyOrCharacter);
+
+    /**
+     * 根据专业或性格查询总招收人数
+     * @param SpecialtyOrCharacter
+     * @return
+     */
+    Long countPeopleBySpecialtyOrCharacters(String SpecialtyOrCharacter);
+    /**
+     * 根据专业或性格查询公司总招收人数
+     * @param SpecialtyOrCharacter
+     * @return
+     */
+    Long countPeopleBySpecialtyOrCharacter(@Param("SpecialtyOrCharacter") String SpecialtyOrCharacter,@Param("companyName") String companyName);
+
 }

@@ -10,4 +10,14 @@
     <select id="countPeople" resultType="java.lang.Long">
             select COUNT(*) from employment_information  WHERE company_name=#{companyName}
     </select>
+    <select id="findCompanyNameBySpecialtyOrCharacter" resultType="java.lang.String">
+            select DISTINCT(company_name) FROM employment_information WHERE student_specialty=#{SpecialtyOrCharacter}  OR student_character=#{SpecialtyOrCharacter}
+    </select>
+    <select id="countPeopleBySpecialtyOrCharacters" resultType="java.lang.Long">
+              select count(*) FROM employment_information WHERE student_specialty=#{SpecialtyOrCharacter}  OR student_character=#{SpecialtyOrCharacter}
+    </select>
+    <select id="countPeopleBySpecialtyOrCharacter" resultType="java.lang.Long">
+       select count(*) FROM employment_information WHERE (student_specialty=#{SpecialtyOrCharacter}  OR student_character=#{SpecialtyOrCharacter})
+       and company_name=#{companyName}
+    </select>
 </mapper>

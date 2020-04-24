@@ -1,5 +1,6 @@
 package com.em.employmentmanagements.service;
 
+import com.em.employmentmanagements.vo.StudentEmploymentAnalysisReportVo;
 import com.em.employmentmanagements.vo.StudentEmploymentVo;
 import org.hibernate.validator.constraints.EAN;
 
@@ -17,4 +18,10 @@ public interface StudentEmploymentRecommendationService {
      * @return
      */
     List<StudentEmploymentVo> finAllEmploymenInfo();
+
+    /**
+     * 生成就业分析报告
+     * @return
+     */
+    List<StudentEmploymentAnalysisReportVo> findAllfinAllEmploymentIndex(String SpecialtyOrCharacter);
 }
