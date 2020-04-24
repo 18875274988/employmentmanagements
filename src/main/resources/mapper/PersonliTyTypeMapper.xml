@@ -3,6 +3,11 @@
 <mapper namespace="com.em.employmentmanagements.mapper.PersonalityTypeMapper">
 
     <select id="findaAllPerson" resultType="com.em.employmentmanagements.po.PersonalityTypePo">
-                        SELECT personality_type FROM major_name;
+                        SELECT id,personality_type FROM major_name;
     </select>
+
+    <update id="updatePersonalityType">
+        update major_name set personality_type=#{personalityType} where id=#{id}
+    </update>
+
 </mapper>

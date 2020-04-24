@@ -33,8 +33,29 @@ public class MajorNameController {
      * 查询所有性格
      * @return
      */
-    @RequestMapping("findaAllPerson")
+    @RequestMapping("/findaAllPerson")
     public List<PersonalityTypePo> findaAllPerson(){
         return  majorNameService.findaAllPerson();
     }
+
+    /**
+     * 根据id修改专业
+     * @param id
+     * @return
+     */
+    @RequestMapping("/updateMajorName")
+    public int updateMajorName(Integer id,String majorName){
+        return majorNameService.updateMajorName(id,majorName);
+    }
+
+    /**
+     * 根据id修改性格
+     * @param id
+     * @return
+     */
+    @RequestMapping("/updatePerson")
+    public int updatePerson(Integer id,String personalityType){
+        return majorNameService.updatePerson(id,personalityType);
+    }
+
 }

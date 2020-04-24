@@ -10,7 +10,9 @@ import lombok.Data;
  **/
 @Data
 public class UserPo {
-
+    /**
+     * 用户类型
+     */
     private String username;    //用户名
     private String password;    //密码
     private String specialty;   //专业

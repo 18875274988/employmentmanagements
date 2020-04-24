@@ -13,5 +13,6 @@ public class PersonalityTypePo {
     /**
      * 性格类型
      */
+    private Integer id;
     private String personalityType;
 }

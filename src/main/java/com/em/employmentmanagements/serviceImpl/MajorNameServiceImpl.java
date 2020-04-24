@@ -41,4 +41,36 @@ public  class MajorNameServiceImpl implements MajorNameService {
     public List<PersonalityTypePo> findaAllPerson() {
         return personalityTypeMapper.findaAllPerson();
     }
+
+    /**
+     * 根据id修改专业
+     * @param id
+     * @param majorName
+     * @return
+     */
+    @Override
+    public int updateMajorName(Integer id, String majorName) {
+        int a = majorNameMapper.updateMajorName(majorName,id);
+        if(a==0){
+            return 3;
+        }else {
+            return a;
+        }
+    }
+
+    /**
+     * 根据id修改性格
+     * @param id
+     * @param personalityType
+     * @return
+     */
+    @Override
+    public int updatePerson(Integer id, String personalityType) {
+        int a = personalityTypeMapper.updatePersonalityType(personalityType,id);
+        if(a==0){
+            return 3;
+        }else {
+            return a;
+        }
+    }
 }

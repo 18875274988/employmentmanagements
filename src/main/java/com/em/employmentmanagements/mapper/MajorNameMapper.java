@@ -2,6 +2,7 @@ package com.em.employmentmanagements.mapper;
 
 import com.em.employmentmanagements.po.MajorNamePo;
 import lombok.Data;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,4 +20,12 @@ public interface MajorNameMapper {
      * @return
      */
     List<MajorNamePo> findAllMajorName();
+
+    /**
+     * 根据id修改专业
+     * @param majorName
+     * @param id
+     * @return
+     */
+    int updateMajorName(@Param("majorName")String majorName,@Param("id")Integer id);
 }
