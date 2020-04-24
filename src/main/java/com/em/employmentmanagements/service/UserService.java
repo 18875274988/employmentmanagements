@@ -1,5 +1,6 @@
 package com.em.employmentmanagements.service;
 
+import com.em.employmentmanagements.po.UserPo;
 import com.em.employmentmanagements.vo.UserVo;
 
 /**
@@ -19,5 +20,7 @@ public interface UserService {
      * @return
      */
     int updatePasswordByname(UserVo userVo);
+
+    UserPo selectById(String username);
 
 }

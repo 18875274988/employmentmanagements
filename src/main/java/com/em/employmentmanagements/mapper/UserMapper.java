@@ -1,5 +1,6 @@
 package com.em.employmentmanagements.mapper;
 
+import com.em.employmentmanagements.po.UserPo;
 import com.em.employmentmanagements.vo.UserVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -34,5 +35,12 @@ public interface UserMapper {
      * @return
      */
     int updatePasswordByname(UserVo userVo);
+
+    /**
+     * 根据用户名查询专业性格
+     * @param username
+     * @return
+     */
+    UserPo selectById(String username);
 
 }

@@ -1,6 +1,7 @@
 package com.em.employmentmanagements.serviceImpl;
 
 import com.em.employmentmanagements.mapper.UserMapper;
+import com.em.employmentmanagements.po.UserPo;
 import com.em.employmentmanagements.service.UserService;
 import com.em.employmentmanagements.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,5 +54,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public int updatePasswordByname(UserVo userVo) {
         return userMapper.updatePasswordByname(userVo);
+    }
+
+    /**
+     * 根据用户名查询专业性格
+     * @param username
+     * @return
+     */
+    @Override
+    public UserPo selectById(String username) {
+        return userMapper.selectById(username);
     }
 }

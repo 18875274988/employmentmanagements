@@ -14,4 +14,8 @@
         update user set password=#{password} where username=#{username}
     </update>
 
+    <select id="selectById" resultType="com.em.employmentmanagements.po.UserPo">
+        select specialty,character_state from user where username=#{username}
+    </select>
+
 </mapper>
