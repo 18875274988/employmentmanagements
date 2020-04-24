@@ -28,6 +28,11 @@ public class MajorNameController {
     public List<MajorNamePo> findAllMajorName(){
         return majorNameService.findAllMajorName();
     }
+
+    /**
+     * 查询所有性格
+     * @return
+     */
     @RequestMapping("findaAllPerson")
     public List<PersonalityTypePo> findaAllPerson(){
         return  majorNameService.findaAllPerson();
