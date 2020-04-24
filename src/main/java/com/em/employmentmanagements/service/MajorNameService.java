@@ -23,4 +23,20 @@ public interface MajorNameService {
      * @return
      */
     List<PersonalityTypePo> findaAllPerson();
+
+    /**
+     * 根据id修改专业
+     * @param id
+     * @param majorName
+     * @return
+     */
+    int updateMajorName(Integer id,String majorName);
+
+    /**
+     * 根据id修改性格
+     * @param id
+     * @param personalityType
+     * @return
+     */
+    int updatePerson(Integer id,String personalityType);
 }

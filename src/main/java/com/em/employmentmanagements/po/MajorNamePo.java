@@ -13,5 +13,6 @@ public class MajorNamePo {
     /**
      * 专业名
      */
+    private Integer id;
     private String majorName;
 }

@@ -1,6 +1,7 @@
 package com.em.employmentmanagements.mapper;
 
 import com.em.employmentmanagements.po.PersonalityTypePo;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,4 +19,12 @@ public interface PersonalityTypeMapper {
      * @return
      */
     List<PersonalityTypePo> findaAllPerson();
+
+    /**
+     * 根据id修改性格
+     * @param personalityType
+     * @param id
+     * @return
+     */
+    int updatePersonalityType(@Param("personalityType")String personalityType, @Param("id")Integer id);
 }
