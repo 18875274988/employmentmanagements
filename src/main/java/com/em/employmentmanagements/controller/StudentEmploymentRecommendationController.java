@@ -29,6 +29,12 @@ public class StudentEmploymentRecommendationController {
     public List<StudentEmploymentVo> finAllEmploymenInfo() {
       return   studentEmploymentRecommendationService.finAllEmploymenInfo();
     }
+
+    /**
+     * 查询所有就业推荐（根据专业或性格）
+     * @param SpecialtyOrCharacter
+     * @return
+     */
     @RequestMapping("findAllfinAllEmploymentIndex")
     public List<StudentEmploymentAnalysisReportVo> findAllfinAllEmploymentIndex(String  SpecialtyOrCharacter){
         return studentEmploymentRecommendationService.findAllfinAllEmploymentIndex(SpecialtyOrCharacter);
