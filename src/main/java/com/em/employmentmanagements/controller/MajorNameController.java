@@ -87,7 +87,6 @@ public class MajorNameController {
     public int addMajorName(MajorNamePo majorNamePo){
         return majorNameService.addMajorName(majorNamePo);
     }
-
     /**
      * 新增性格类型
      * @param personalityTypePo
