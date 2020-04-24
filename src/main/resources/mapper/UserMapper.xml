@@ -10,5 +10,8 @@
     <select id="login" resultType="String">
         select permission from user where username=#{username} and password=#{password}
     </select>
+    <update id="updatePasswordByname">
+        update user set password=#{password} where username=#{username}
+    </update>
 
 </mapper>

@@ -44,4 +44,14 @@ public class UserServiceImpl implements UserService {
             return Integer.valueOf(a);
         }
     }
+
+    /**
+     * 根据用户名修改密码
+     * @param userVo
+     * @return
+     */
+    @Override
+    public int updatePasswordByname(UserVo userVo) {
+        return userMapper.updatePasswordByname(userVo);
+    }
 }

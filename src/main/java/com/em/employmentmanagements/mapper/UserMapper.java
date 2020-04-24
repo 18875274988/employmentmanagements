@@ -28,4 +28,11 @@ public interface UserMapper {
      */
     String login(@Param("username")String username,@Param("password")String password);
 
+    /**
+     * 根据用户姓名修改密码
+     * @param userVo
+     * @return
+     */
+    int updatePasswordByname(UserVo userVo);
+
 }

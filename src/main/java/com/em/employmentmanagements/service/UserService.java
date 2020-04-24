@@ -13,5 +13,11 @@ public interface UserService {
     int register(UserVo userVo);
 
     int login(String username,String password);
+    /**
+     * 根据用户姓名修改密码
+     * @param userVo
+     * @return
+     */
+    int updatePasswordByname(UserVo userVo);
 
 }

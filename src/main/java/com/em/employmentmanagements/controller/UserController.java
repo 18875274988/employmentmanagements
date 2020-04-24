@@ -40,5 +40,8 @@ public class UserController {
         int a = userService.login(username,password);
         return a;
     }
-
+    @PostMapping("updatePasswordByname" )
+    public int updatePasswordByname(UserVo userVo){
+        return userService.updatePasswordByname(userVo);
+    }
 }
