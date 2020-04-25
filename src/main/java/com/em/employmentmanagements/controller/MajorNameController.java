@@ -85,6 +85,9 @@ public class MajorNameController {
      */
     @RequestMapping("addMajorName")
     public int addMajorName(MajorNamePo majorNamePo){
+        if(majorNamePo.getMajorName()==null || majorNamePo.getMajorName()==""){
+            return 3;
+        }
         return majorNameService.addMajorName(majorNamePo);
     }
     /**
@@ -94,6 +97,10 @@ public class MajorNameController {
      */
     @RequestMapping("addPersonalityType")
     public int addPersonalityType(PersonalityTypePo personalityTypePo){
-        return majorNameService.addPersonalityType(personalityTypePo);
+        if(personalityTypePo.getPersonalityType()==null || personalityTypePo.getPersonalityType()=="" ){
+            return 3;
+        }else {
+            return majorNameService.addPersonalityType(personalityTypePo);
+        }
     }
 }

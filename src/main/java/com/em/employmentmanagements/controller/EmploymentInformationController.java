@@ -21,7 +21,11 @@ public class EmploymentInformationController {
      */
     @GetMapping("addEmploymentInformation")
     public int addEmploymentInformation(EmploymentInformationPo employmentInformationPo){
-        return employmentInformationService.addEmploymentInformation(employmentInformationPo);
+        if(employmentInformationPo.getStudentName()==""|| employmentInformationPo.getStudentNo()=="" || employmentInformationPo.getCompanyName()=="" || employmentInformationPo.getDuty()=="" || employmentInformationPo.getStudentClass()==""|| employmentInformationPo.getStudentTeacher()==""){
+            return 3;
+        }else {
+            return employmentInformationService.addEmploymentInformation(employmentInformationPo);
+        }
     }
 
     /**

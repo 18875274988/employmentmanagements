@@ -41,9 +41,19 @@ public class UserController {
         int a = userService.login(username,password);
         return a;
     }
+
+    /**
+     * 根据用户名修改密码
+     * @param userVo
+     * @return
+     */
     @PostMapping("updatePasswordByname" )
     public int updatePasswordByname(UserVo userVo){
-        return userService.updatePasswordByname(userVo);
+        if(userVo.getPassword()=="" || userVo.getPassword()==null){
+            return 3;
+        }else {
+            return userService.updatePasswordByname(userVo);
+        }
     }
 
     /**
